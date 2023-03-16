@@ -1,4 +1,4 @@
-'''
+
 Tuple
 
 Tuplas são bastante parecidas com listas
@@ -98,25 +98,50 @@ nome = tuple('George da Silva Rodrigues')
 print(nome)
 print(nome.count('e'))
 -------------------------------------------------------------------------------------------------------------------------------
+#Numerando os dados da tupla
 
-'''
-#dicas na utilização de tuplas
+meses = ('janeiro',
+         'fevereiro',
+         'março',
+         'abril',
+         'maio',
+         'junho',
+         'julho',
+         'agosto',
+         'setembro',
+         'outubro',
+         'novembro',
+         'dezembro'
+         )
 
-
-meses = ('janeiro   ',
-'fevereiro ',
-'março    ',
-'abril    ',
-'maio     ',
-'junho    ',
-'julho    ',
-'agosto   ',
-'setembro ',
-'outubro  ',
-'novembro ',
-'dezembro '
- )
 i = 0
 while i < len(meses):
     print(i, meses[i])
     i += 1
+----------------------------------------------------------------------------------------------------------------------------------
+# Verificando em qual indice um elemento esta na tupla
+
+print(meses.index('junho', 3))
+------------------------------------------------------------------------------------------------------------------------------------
+#Slicing
+-------------------------------------------------------------------------------------------------------------------------
+print(meses[0:8])
+---------------------------------------------------------------------------------------------------------------------------
+#copiando uma tupla
+
+tupla = (1, 2, 3, 4, 5)
+teste = ('Soma', 6, 7, 8)
+
+nova = tupla
+
+print(nova)
+
+nova += teste
+
+print(nova)
+
+
+
+
+
+

@@ -6,7 +6,7 @@
 #chave e valor são separados por dois pontos, ambos podem ser de qualquer tipo de dados e podem ser misturados
 
 print(type({}))
---------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------
 #criação de dicionarios
 
 #Forma mais comum
@@ -20,7 +20,7 @@ print(type(paises))
 paises = dict(br='Brasil', eua='Estados unidos', py='Paraguay')
 
 print(paises)
----------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------
 #acessando elementos
 
 paises = dict(br='Brasil', eua='Estados unidos', py='Paraguay')
@@ -36,7 +36,7 @@ print(paises.get('eua'))
 #utilizando o get o retorno quendo não ouver a chave procurada será None, não um erro como o acesso via chaves, geraria muito codigo de tratameto
 
 print(paises.get('ru'))
----------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------
 #exemplo
 #aqui funciona normalmente
 paises = dict(br='Brasil', eua='Estados unidos', py='Paraguay')
@@ -75,7 +75,7 @@ print('Estados Unidos' in paises) #não busca por valor somente pela chave
 
 if 'br' in paises:
     russia = paises['br']
-------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 #podemos utilizar varios tipo de dados
 
 #tuplas são interessantes para serem usadas com chave pois são imutáveis
@@ -87,7 +87,7 @@ localidades = {
 
 print(localidades)
 print(type(localidades))
-------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 #adicionar elementos no dicionario
 
 receita = {'jan': 100, 'fev': 150, 'mar': 200}
@@ -104,7 +104,7 @@ print(receita)
 
 print(type(receita))
 
-------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 # atualizando um dicionario (OBS: Não podemos ter chaves repetidas)
 #forma 1
 receita['MAI'] = 450
@@ -113,7 +113,7 @@ receita['MAI'] = 450
 receita.update({'jan': 30000})
 
 print(receita)
-------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 #remover dados de um dicionário
 
 receita = {'jan': 100, 'fev': 150, 'mar': 200}
@@ -133,10 +133,11 @@ del receita['fev'] #não retorna valor
 print(receita)
 
 #OBS: Se a chave não existir será gerado um erro
-------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 
 #ideia de utilização
 #Lista
+
 carrinho = []
 
 produto1 = ['Playstation4', 1, 2300.00]
@@ -147,9 +148,9 @@ carrinho.append(produto2)
 
 print(carrinho)
 #OBS: Neste caso teriamos que saber o indice de cada produto
-'''
 
 #Tupla
+
 carrinho = []
 
 produto1 = ['Playstation4', 1, 2300.00]
@@ -158,3 +159,58 @@ produto2 = ['Godofwar', 1, 100.00]
 carrinho = (produto1, produto2)
 
 print(carrinho)
+#------------------------------------------------------------------------------------------------------------------------
+
+#Dicionario
+carrinho = []
+
+produto1 = {'nome': 'Playstation', 'Quantidade': 1, 'Preço': 2300.00}
+
+produto2 = {'nome': 'GOW', 'Quantidade': 1, 'preço': 150.00}
+
+carrinho.append(produto1)
+carrinho.append(produto2)
+
+print(carrinho)
+
+#desta forma facilmente adicionamos ou removemos do carrinho tendo certeza da informação
+-----------------------------------------------------------------------------------------------------------------------
+#limpar o dicionario
+
+D.clear()
+
+print(D)
+
+------------------------------------------------------------------------------------------------------------------------
+#copiando o dicionario
+#Deep Copy
+novo = D.copy()
+
+print(novo)
+
+novo['D'] = 4
+
+print(D)
+print(novo)
+print('-----------------------------------------------------------------------------------------------------------------------')
+#shallow copy
+
+D = dict(a=1, b=2, c=3)
+
+novo = D
+
+novo['d'] = 4
+
+print(D)
+        #ambos receberam a alteração, mesmo sendo feita somente na variavel "novo"
+print(novo)
+
+'''
+
+
+
+
+
+
+
+
