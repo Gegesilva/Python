@@ -1,4 +1,4 @@
-'''
+
 #Dicionarios
 
 #OBS: em algumas liguagens são conhecidos por mapas
@@ -174,14 +174,14 @@ carrinho.append(produto2)
 print(carrinho)
 
 #desta forma facilmente adicionamos ou removemos do carrinho tendo certeza da informação
------------------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------------
 #limpar o dicionario
 
 D.clear()
 
 print(D)
 
-------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------
 #copiando o dicionario
 #Deep Copy
 novo = D.copy()
@@ -204,8 +204,23 @@ novo['d'] = 4
 print(D)
         #ambos receberam a alteração, mesmo sendo feita somente na variavel "novo"
 print(novo)
+#-------------------------------------------------------------------------------------------------------------------------
+#forma não usual de criação de dicionario
 
-'''
+outro = {}.fromkeys('a', 'b')
+
+print(outro)
+print(type(outro))
+
+usuario = {}.fromkeys(['nome', 'pontos', 'email', 'profile'], 'desconhecido')
+print(usuario)          #neste caso a palavra 'desconhecido' virou o valor, e as palavras das lista as chaves
+print(type(usuario))
+
+veja = {}.fromkeys('teste', 'valor')
+print(veja)   #neste caso cada letra da primeira palavra se tornou as chaves
+
+veja = {}.fromkeys(range(1, 11), 'novo')
+print(veja)  #utilizando range
 
 
 
